@@ -1,0 +1,27 @@
+<div *ngIf="isShow">
+  <div class="context">
+    <div class="subtitle">Simple API</div>
+    <div *ngIf="!hasError">
+      <p>
+        &#36; curl https://ifconfig.is
+        <br />
+        {{ data.IP.Address }}
+      </p>
+      <div>
+        &#36; curl https://ifconfig.is/json
+      </div>
+      <pre>{{ jsonStr }}</pre>
+    </div>
+    <div *ngIf="hasError">
+      <p>
+        &#36; curl https://ifconfig.is
+        <br />
+        Error
+      </p>
+      <div>
+        &#36; curl https://ifconfig.is/json
+      </div>
+      Error
+    </div>
+  </div>
+</div>

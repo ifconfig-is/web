@@ -1,0 +1,23 @@
+.ip-box {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.ip {
+  border: 1px solid #cbcbcb;
+  background: #f2f2f2;
+  font-size: 36px;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+@media only screen and (max-width: 768px) {
+  .ip {
+    border: 1px solid #cbcbcb;
+    background: #f2f2f2;
+    font-size: 24px;
+    padding: 15px;
+  }
+}

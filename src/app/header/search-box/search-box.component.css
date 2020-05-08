@@ -1,0 +1,16 @@
+.search-box {
+  padding-top: 10px;
+  text-align: center;
+}
+
+.mat-icon {
+  font-size: 20px;
+  padding-right: 16px;
+}
+
+.my-form-field {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+  font-size: 20px;
+}

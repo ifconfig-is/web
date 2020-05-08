@@ -1,0 +1,33 @@
+<div *ngIf="isShow">
+  <div class="context">
+    <div class="subtitle">IP Data</div>
+    <div *ngIf="!hasError">
+      <p>
+        Continent : {{ data.GeoIP2City.Continent.Names.en }} ({{
+        data.GeoIP2City.Continent.Code }})
+      </p>
+      <p>
+        Country : {{ data.GeoIP2City.Country.Names.en }} ({{
+        data.GeoIP2City.Country.IsoCode }})
+      </p>
+      <p>City : {{ data.GeoIP2City.City.Names.en }}</p>
+      <p>Latitude : {{ data.GeoIP2City.Location.Latitude }}</p>
+      <p>Longitude : {{ data.GeoIP2City.Location.Longitude }}</p>
+      <p>TimeZone : {{ data.GeoIP2City.Location.TimeZone }}</p>
+      <p>IsEU: {{ data.GeoIP2City.Country.IsInEuropeanUnion }}</p>
+      <p>ASN : {{ data.GeoIP2ASN.AutonomousSystemNumber }}</p>
+      <p>ORG : {{ data.GeoIP2ASN.AutonomousSystemOrganization }}</p>
+    </div>
+    <div *ngIf="hasError">
+      <p>Continent : NULL</p>
+      <p>Country : NULL</p>
+      <p>City : NULL</p>
+      <p>Latitude : NULL</p>
+      <p>Longitude : NULL</p>
+      <p>TimeZone : NULL</p>
+      <p>IsEU: NULL</p>
+      <p>ASN : NULL</p>
+      <p>ORG : NULL</p>
+    </div>
+  </div>
+</div>

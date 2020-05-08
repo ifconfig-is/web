@@ -1,0 +1,32 @@
+<div *ngIf="!isMobile">
+  <div class="col-6 search-box">
+    <mat-form-field class="my-form-field">
+      <input
+        matInput
+        type="text"
+        placeholder="IP or URL"
+        [(ngModel)]="query"
+        (keydown)="onEnterSearch($event)"
+      />
+      <mat-icon matPrefix>search</mat-icon>
+    </mat-form-field>
+  </div>
+</div>
+<div *ngIf="isMobile">
+  <div class="col-8 search-box">
+    <div class="field">
+      <div class="control has-icons-left">
+        <input
+          class="input is-rounded"
+          type="text"
+          placeholder="www.cloudflare.com"
+          [(ngModel)]="query"
+          (keydown)="onEnterSearch($event)"
+        />
+        <span class="icon is-small is-left">
+          <mat-icon svgIcon="magnify"></mat-icon>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
