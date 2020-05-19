@@ -1,0 +1,35 @@
+name: Deploy to Server
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  publish_release:
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout code
+      - uses: actions/checkout@master
+
+      # Build
+      - uses: actions/setup-node@master
+
+      - name: Install node package
+        run: |
+          npm install -g @angular/cli
+          npm install
+
+      - name: Build
+        run: |
+          ng build --prod --output-path=dist/ifconfig
+
+      # Deploy
+      - name: Rsync to Server
+        uses: i3h/actions/rsync@master
+        env:
+          SERVER: ${{ secrets.SERVER_IP }}
+          USERNAME: root
+          KEY: ${{ secrets.SERVER_KEY }}
+          SRC: ./dist/ifconfig/
+          DEST: /var/www/ifconfig/web
