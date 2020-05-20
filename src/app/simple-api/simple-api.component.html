@@ -1,6 +1,6 @@
-<div *ngIf="isShow">
-  <div class="context">
-    <div class="subtitle">Simple API</div>
+<div class="context">
+  <div class="subtitle">Simple API</div>
+  <div *ngIf="isShow">
     <div *ngIf="!hasError">
       <p>
         &#36; curl https://ifconfig.is
@@ -15,5 +15,8 @@
     <div *ngIf="hasError">
       <p>Error</p>
     </div>
+  </div>
+  <div *ngIf="!isShow">
+    <p>Loading...</p>
   </div>
 </div>

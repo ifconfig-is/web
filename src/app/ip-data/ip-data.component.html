@@ -1,6 +1,6 @@
-<div *ngIf="isShow">
-  <div class="context">
-    <div class="subtitle">IP Data</div>
+<div class="context">
+  <div class="subtitle">IP Data</div>
+  <div *ngIf="isShow">
     <div *ngIf="!hasError">
       <p>
         Continent : {{ data.GeoIP2City.Continent.Names.en }} ({{
@@ -21,5 +21,8 @@
     <div *ngIf="hasError">
       <p>Error</p>
     </div>
+  </div>
+  <div *ngIf="!isShow">
+    <p>Loading...</p>
   </div>
 </div>
