@@ -38,6 +38,7 @@ pre {
   white-space: -pre-wrap;
   white-space: -o-pre-wrap;
   word-wrap: break-word;
+  padding-bottom: 15px;
 }
 
 .center {

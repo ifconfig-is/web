@@ -1,46 +1,24 @@
 <div class="wrapper">
   <app-header></app-header>
-  <div *ngIf="widthLevel == 'max'">
-    <div class="ip-box row-container flex-container col-12">
-      <app-ip-box></app-ip-box>
-    </div>
-    <div class="row-container flex-container col-12">
-      <app-ip-data></app-ip-data>
-      <app-simple-api></app-simple-api>
-      <app-gql-api></app-gql-api>
-    </div>
-    <div class="row-container flex-container col-12">
-      <app-note></app-note>
-    </div>
+  <div class="ip-box row-container flex-container col-12">
+    <app-ip-box></app-ip-box>
   </div>
-  <div *ngIf="widthLevel == 'mid'">
-    <div class="ip-box row-container flex-container col-12">
-      <app-ip-box></app-ip-box>
-    </div>
-    <div class="row-container flex-container col-12">
-      <app-ip-data></app-ip-data>
-      <app-simple-api></app-simple-api>
-    </div>
-    <div class="row-container flex-container col-12">
-      <app-note></app-note>
-      <app-gql-api></app-gql-api>
-    </div>
+  <!--
+  <div class="row-container flex-container col-12">
+    <app-ip-data></app-ip-data>
+    <app-simple-api></app-simple-api>
+    <app-gql-api></app-gql-api>
   </div>
-  <div *ngIf="widthLevel == 'min'">
-    <div class="ip-box row-container flex-container col-12">
-      <app-ip-box></app-ip-box>
-    </div>
-    <div class="row-container flex-container col-12">
-      <app-ip-data></app-ip-data>
-    </div>
-    <div class="row-container flex-container col-12">
-      <app-simple-api></app-simple-api>
-    </div>
-    <div class="row-container flex-container col-12">
-      <app-gql-api></app-gql-api>
-    </div>
-    <div class="row-container flex-container col-12">
-      <app-note></app-note>
-    </div>
+  <div class="row-container flex-container col-12">
+    <app-note></app-note>
+  </div>
+	-->
+  <div class="row-container flex-grid col-12">
+    <app-ip-data></app-ip-data>
+    <app-simple-api></app-simple-api>
+    <app-gql-api></app-gql-api>
+  </div>
+  <div class="ip-box row-container flex-container col-12">
+    <app-note></app-note>
   </div>
 </div>
