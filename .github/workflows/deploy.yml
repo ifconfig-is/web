@@ -17,12 +17,11 @@ jobs:
 
       - name: Install node package
         run: |
-          npm install -g @angular/cli
           npm install
 
       - name: Build
         run: |
-          ng build --prod --output-path=dist/ifconfig
+          npm run build
 
       # Deploy
       - name: Rsync to Server
