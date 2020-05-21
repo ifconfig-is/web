@@ -1,3 +1,10 @@
+# Scripts
+/docker/build.sh
+/docker/run.sh
+
+# Static files
+/docker/static_files
+
 # compiled output
 /dist
 /tmp
