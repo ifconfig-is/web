@@ -2,15 +2,17 @@ version: "3"
 
 services:
   api:
+    container_name: ifconfig_api
     build:
       context: .
       dockerfile: Dockerfile.api
-    container_name: ifconfig_api
-    network_mode: "host"
+    volumes:
+      - /var/www/maxmind:/maxmind
 
   web:
+    container_name: ifconfig_web
     build:
       context: .
       dockerfile: Dockerfile.web
-    container_name: ifconfig_web
-    network_mode: "host"
+    ports:
+      - "3080:3080"

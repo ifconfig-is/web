@@ -26,5 +26,5 @@ RUN cd ifconfig/dispatcher && /usr/local/go/bin/go build .
 
 CMD cd ifconfig/dispatcher && \
 	export IFCONFIG_DISPATCHER_PORT=3080 && \
-	export IFCONFIG_API="http://localhost:3001" && \
+	export IFCONFIG_API="http://api:3000" && \
 	./dispatcher
