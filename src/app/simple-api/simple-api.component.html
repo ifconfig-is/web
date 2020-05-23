@@ -3,12 +3,12 @@
   <div *ngIf="isShow">
     <div *ngIf="!hasError">
       <p>
-        &#36; curl https://ifconfig.is
+        &#36; curl ifconfig.is
         <br />
         {{ data.IP.Address }}
       </p>
       <div>
-        &#36; curl https://ifconfig.is/json
+        &#36; curl ifconfig.is/json
       </div>
       <pre>{{ jsonStr }}</pre>
     </div>
