@@ -3,16 +3,12 @@ version: "3"
 services:
   api:
     container_name: ifconfig_api
-    build:
-      context: .
-      dockerfile: Dockerfile.api
+    image: mark314/geoip2-gql
     volumes:
       - /var/www/maxmind:/maxmind
 
   web:
     container_name: ifconfig_web
-    build:
-      context: .
-      dockerfile: Dockerfile.web
+    image: mark314/ifconfig
     ports:
       - "3080:3080"
