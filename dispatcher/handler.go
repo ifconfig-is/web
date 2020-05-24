@@ -7,17 +7,22 @@ import (
 	"net/http"
 	"net/http/httputil"
 	"net/url"
+	"regexp"
 	"strings"
 
 	"github.com/gin-gonic/gin"
 )
 
+func IsBrowser(c *gin.Context) bool {
+	r, _ := regexp.Compile("Gecko|WebKit|Presto|Trident|EdgeHTML|Blink")
+	return r.MatchString(c.Request.UserAgent())
+}
+
 func Dispatcher(API string) gin.HandlerFunc {
 	return func(c *gin.Context) {
-		userAgent := c.Request.UserAgent()
+		isBrowser := IsBrowser(c)
 		path := c.Request.URL.String()
 		r := strings.Split(path, "/")[1]
-		isBrowser := strings.Contains(userAgent, "WebKit")
 
 		if r == "gql" {
 			PassToApi(c)
