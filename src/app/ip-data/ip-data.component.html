@@ -2,21 +2,35 @@
   <div class="subtitle">IP Data</div>
   <div *ngIf="isShow">
     <div *ngIf="!hasError">
-      <p>
+      <p *ngIf="data.GeoIP2City.Continent.Names.en != null">
         Continent : {{ data.GeoIP2City.Continent.Names.en }} ({{
         data.GeoIP2City.Continent.Code }})
       </p>
-      <p>
+      <p *ngIf="data.GeoIP2City.Country.Names.en != null">
         Country : {{ data.GeoIP2City.Country.Names.en }} ({{
         data.GeoIP2City.Country.IsoCode }})
       </p>
-      <p>City : {{ data.GeoIP2City.City.Names.en }}</p>
-      <p>Latitude : {{ data.GeoIP2City.Location.Latitude }}</p>
-      <p>Longitude : {{ data.GeoIP2City.Location.Longitude }}</p>
-      <p>TimeZone : {{ data.GeoIP2City.Location.TimeZone }}</p>
-      <p>IsEU: {{ data.GeoIP2City.Country.IsInEuropeanUnion }}</p>
-      <p>ASN : {{ data.GeoIP2ASN.AutonomousSystemNumber }}</p>
-      <p>ORG : {{ data.GeoIP2ASN.AutonomousSystemOrganization }}</p>
+      <p *ngIf="data.GeoIP2City.City.Names.en != null">
+        City : {{ data.GeoIP2City.City.Names.en }}
+      </p>
+      <p *ngIf="data.GeoIP2City.Location.Latitude != null">
+        Latitude : {{ data.GeoIP2City.Location.Latitude }}
+      </p>
+      <p *ngIf="data.GeoIP2City.Location.Longitude != null">
+        Longitude : {{ data.GeoIP2City.Location.Longitude }}
+      </p>
+      <p *ngIf="data.GeoIP2City.Location.TimeZone != null">
+        TimeZone : {{ data.GeoIP2City.Location.TimeZone }}
+      </p>
+      <p *ngIf="data.GeoIP2City.Country.IsInEuropeanUnion != null">
+        IsEU: {{ data.GeoIP2City.Country.IsInEuropeanUnion }}
+      </p>
+      <p *ngIf="data.GeoIP2ASN.AutonomousSystemNumber != null">
+        ASN : {{ data.GeoIP2ASN.AutonomousSystemNumber }}
+      </p>
+      <p *ngIf="data.GeoIP2ASN.AutonomousSystemOrganization != null">
+        ORG : {{ data.GeoIP2ASN.AutonomousSystemOrganization }}
+      </p>
     </div>
     <div *ngIf="hasError">
       <p>Error</p>

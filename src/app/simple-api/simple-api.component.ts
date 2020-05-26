@@ -13,6 +13,14 @@ export class SimpleApiComponent implements OnInit {
   json: any;
   jsonStr: any;
 
+  cleanNull(obj) {
+    for (let propName in obj) {
+      if (obj[propName] === null || obj[propName] === undefined) {
+        delete obj[propName];
+      }
+    }
+  }
+
   constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
@@ -36,6 +44,7 @@ export class SimpleApiComponent implements OnInit {
             ASN: this.data.GeoIP2ASN.AutonomousSystemNumber,
             ORG: this.data.GeoIP2ASN.AutonomousSystemOrganization
           };
+          this.cleanNull(this.json);
           this.jsonStr = JSON.stringify(this.json, null, 2);
         }
       } else {
