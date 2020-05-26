@@ -132,3 +132,10 @@ a {
   margin: auto;
   width: calc(var(--main-width) / 100 * 100);
 }
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+}

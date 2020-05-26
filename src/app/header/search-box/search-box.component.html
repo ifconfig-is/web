@@ -1,26 +1,11 @@
-<div *ngIf="!isMobile">
-  <div class="col-6 search-box">
-    <mat-form-field class="my-form-field">
-      <input
-        matInput
-        type="text"
-        placeholder="Search"
-        [(ngModel)]="query"
-        (keydown)="onEnterSearch($event)"
-      />
-    </mat-form-field>
-  </div>
-</div>
-<div *ngIf="isMobile">
-  <div class="col-10 search-box">
-    <mat-form-field class="my-form-field">
-      <input
-        matInput
-        type="text"
-        placeholder="Search"
-        [(ngModel)]="query"
-        (keydown)="onEnterSearch($event)"
-      />
-    </mat-form-field>
-  </div>
+<div class="search-box">
+  <mat-form-field class="my-form-field">
+    <input
+      matInput
+      type="text"
+      placeholder="Search"
+      [(ngModel)]="query"
+      (keydown)="onEnterSearch($event)"
+    />
+  </mat-form-field>
 </div>
