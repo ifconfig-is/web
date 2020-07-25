@@ -1,9 +1,3 @@
-# Scripts
-/docker/build.sh
-/docker/run.sh
-build-docker-image.sh
-run-docker-container.sh
-
 # Static files
 /docker/static_files
 
