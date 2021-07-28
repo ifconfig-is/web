@@ -17,9 +17,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { IpDataComponent } from './ip-data/ip-data.component';
-import { GraphQLModule } from './graphql.module';
 import { HttpClientModule } from '@angular/common/http';
-import { GqlApiComponent } from './gql-api/gql-api.component';
 import { IpBoxComponent } from './ip-box/ip-box.component';
 import { SimpleApiComponent } from './simple-api/simple-api.component';
 import { NoteComponent } from './note/note.component';
@@ -32,7 +30,6 @@ import { GithubIconComponent } from './header/github-icon/github-icon.component'
     HeaderComponent,
     FooterComponent,
     IpDataComponent,
-    GqlApiComponent,
     IpBoxComponent,
     SimpleApiComponent,
     NoteComponent,
@@ -44,7 +41,6 @@ import { GithubIconComponent } from './header/github-icon/github-icon.component'
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
-    GraphQLModule,
     HttpClientModule,
     MatIconModule,
     MatFormFieldModule,
