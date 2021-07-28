@@ -15,12 +15,10 @@ import { MatInputModule } from '@angular/material/input';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
 import { IpDataComponent } from './ip-data/ip-data.component';
 import { HttpClientModule } from '@angular/common/http';
 import { IpBoxComponent } from './ip-box/ip-box.component';
 import { SimpleApiComponent } from './simple-api/simple-api.component';
-import { NoteComponent } from './note/note.component';
 import { SearchBoxComponent } from './header/search-box/search-box.component';
 import { GithubIconComponent } from './header/github-icon/github-icon.component';
 
@@ -28,11 +26,9 @@ import { GithubIconComponent } from './header/github-icon/github-icon.component'
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent,
     IpDataComponent,
     IpBoxComponent,
     SimpleApiComponent,
-    NoteComponent,
     SearchBoxComponent,
     GithubIconComponent
   ],
