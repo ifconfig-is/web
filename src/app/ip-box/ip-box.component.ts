@@ -15,21 +15,9 @@ export class IpBoxComponent implements OnInit {
   constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
-    /*
-    this.dataService.doQuery();
-    this.dataService.sharedIPData.subscribe(data => {
+    this.dataService.doQuery().subscribe((data) => {
       this.data = data;
-      if (typeof this.data.IP !== 'undefined') {
-        this.isShow = true;
-        if (this.data.IP == null) {
-          this.hasError = true;
-        } else {
-          this.hasError = false;
-        }
-      } else {
-        this.isShow = false;
-      }
+      this.isShow = true;
     });
-		*/
   }
 }

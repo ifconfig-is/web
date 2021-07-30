@@ -1,7 +1,6 @@
 <div *ngIf="isShow">
   <div class="context ip-box">
-    <p class="ip" *ngIf="!hasError">{{ data.IP.Address }}</p>
-    <p class="ip" *ngIf="hasError">Invalid Query</p>
+    <p class="ip">{{ data.ip }}</p>
     <a href="https://db-ip.com">IP Geolocation by DB-IP</a>
   </div>
 </div>
