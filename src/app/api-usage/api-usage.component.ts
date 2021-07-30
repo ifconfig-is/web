@@ -34,7 +34,7 @@ export class ApiUsageComponent implements OnInit {
           continent: this.data.continent,
           latitude: this.data.latitude,
           longitude: this.data.longitude,
-          organization: this.data.org,
+          organization: this.data.organization,
           asn: this.data.asn,
         };
         this.cleanNull(this.json);

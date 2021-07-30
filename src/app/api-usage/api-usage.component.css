@@ -1,0 +1,5 @@
+.limit-width {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  width: 320px;
+}

@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 
 :root {
-  --main-width: 80vw;
+  --main-width: 1200px;
   --main-color-green: #33bfa2;
   --main-color-blue: #2fa4fe;
   --main-color-red: #f4526b;
