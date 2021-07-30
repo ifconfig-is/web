@@ -8,6 +8,9 @@ td {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  width: 12vw;
 }
 
 tr:nth-child(even) {
