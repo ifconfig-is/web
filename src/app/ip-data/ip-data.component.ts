@@ -7,13 +7,27 @@ import { DataService } from '../data.service';
   styleUrls: ['./ip-data.component.css'],
 })
 export class IpDataComponent implements OnInit {
-  data: any;
+  data: any = {
+    ip: 'Loading...',
+    city: 'Loading...',
+    country: 'Loading...',
+    continent: 'Loading...',
+    latitude: 'Loading...',
+    longitude: 'Loading...',
+    org: 'Loading...',
+    asn: 'Loading...',
+  };
+  isLoading: boolean = true;
 
   constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
     this.dataService.doQuery().subscribe((data) => {
       this.data = data;
+      if (typeof this.data.ip !== 'undefined') {
+        console.log(this.data);
+        this.isLoading = false;
+      }
     });
   }
 }

@@ -9,15 +9,16 @@ import { DataService } from '../data.service';
 export class IpBoxComponent implements OnInit {
   isMobile: boolean = window.innerWidth < 768;
   data: any;
-  isShow: boolean;
-  hasError: boolean;
+  isLoading: boolean = true;
 
   constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
     this.dataService.doQuery().subscribe((data) => {
       this.data = data;
-      this.isShow = true;
+      if (typeof this.data.ip !== 'undefined') {
+        this.isLoading = false;
+      }
     });
   }
 }

@@ -1,10 +1,10 @@
-<div *ngIf="isShow">
+<div *ngIf="!isLoading">
   <div class="context ip-box">
     <p class="ip">{{ data.ip }}</p>
     <a href="https://db-ip.com">IP Geolocation by DB-IP</a>
   </div>
 </div>
-<div *ngIf="!isShow">
+<div *ngIf="isLoading">
   <div class="context ip-box">
     <p class="ip">Loading...</p>
     <a href="https://db-ip.com">IP Geolocation by DB-IP</a>
