@@ -4,6 +4,7 @@
 
 :root {
   --main-width: 1200px;
+  --main-width-mobile: 90vw;
   --main-color-green: #33bfa2;
   --main-color-blue: #2fa4fe;
   --main-color-red: #f4526b;

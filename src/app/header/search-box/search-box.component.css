@@ -22,7 +22,7 @@
     padding-top: 10px;
     text-align: center;
     margin: auto;
-    width: calc(var(--main-width) / 100 * 90);
+    width: calc(var(--main-width-mobile) / 100 * 90);
   }
 }
 

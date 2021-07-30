@@ -3,8 +3,12 @@
   <div class="ip-box row-container flex-container col-10">
     <app-ip-box></app-ip-box>
   </div>
-  <div class="row-container flex-grid col-10">
+  <div *ngIf="!isMobile" class="row-container flex-grid col-10">
     <app-ip-data></app-ip-data>
+    <app-api-usage></app-api-usage>
+  </div>
+  <div *ngIf="isMobile" class="row-container flex-grid col-10">
+    <app-ip-data style="margin-bottom: 40px"></app-ip-data>
     <app-api-usage></app-api-usage>
   </div>
 </div>
