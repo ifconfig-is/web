@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import {
   DomSanitizer,
   SafeResourceUrl,
-  SafeUrl
+  SafeUrl,
 } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -18,7 +18,7 @@ import { HeaderComponent } from './header/header.component';
 import { IpDataComponent } from './ip-data/ip-data.component';
 import { HttpClientModule } from '@angular/common/http';
 import { IpBoxComponent } from './ip-box/ip-box.component';
-import { SimpleApiComponent } from './simple-api/simple-api.component';
+import { ApiUsageComponent } from './api-usage/api-usage.component';
 import { SearchBoxComponent } from './header/search-box/search-box.component';
 import { GithubIconComponent } from './header/github-icon/github-icon.component';
 
@@ -28,9 +28,9 @@ import { GithubIconComponent } from './header/github-icon/github-icon.component'
     HeaderComponent,
     IpDataComponent,
     IpBoxComponent,
-    SimpleApiComponent,
+    ApiUsageComponent,
     SearchBoxComponent,
-    GithubIconComponent
+    GithubIconComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,10 +40,10 @@ import { GithubIconComponent } from './header/github-icon/github-icon.component'
     HttpClientModule,
     MatIconModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {
   constructor(matIconRegistry: MatIconRegistry, domSanitizer: DomSanitizer) {

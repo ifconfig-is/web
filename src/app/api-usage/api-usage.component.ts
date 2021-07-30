@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
 
 @Component({
-  selector: 'app-simple-api',
-  templateUrl: './simple-api.component.html',
-  styleUrls: ['./simple-api.component.css'],
+  selector: 'app-api-usage',
+  templateUrl: './api-usage.component.html',
+  styleUrls: ['./api-usage.component.css'],
 })
-export class SimpleApiComponent implements OnInit {
+export class ApiUsageComponent implements OnInit {
   isShow: boolean;
   hasError: boolean;
   data: any;
