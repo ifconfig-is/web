@@ -14,7 +14,7 @@ export class IpBoxComponent implements OnInit {
   constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
-    this.dataService.doQuery().subscribe((data) => {
+    this.dataService.doQuery('').subscribe((data) => {
       this.data = data;
       if (typeof this.data.ip !== 'undefined') {
         this.isLoading = false;

@@ -1,9 +1,9 @@
 <div class="search-box">
-  <mat-form-field class="my-form-field">
+  <mat-form-field class="my-form-field" [floatLabel]="'never'">
     <input
       matInput
       type="text"
-      placeholder="Search"
+      placeholder="Type ip address or url to query for data"
       [(ngModel)]="query"
       (keydown)="onEnterSearch($event)"
     />

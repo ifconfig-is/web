@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://dev.ifconfig.is:5000/json/1.1.1.1',
+  apiUrl: 'http://dev.ifconfig.is:5000/json',
 };
 
 /*

@@ -14,7 +14,9 @@ export class SearchBoxComponent implements OnInit {
     if (event.keyCode == 13) {
       let ip = this.filter(this.query);
       this.query = ip;
-      //this.dataService.nextQuery(this.query);
+      this.dataService.doQuery(this.query).subscribe((data) => {
+        console.log(data);
+      });
     }
   }
 

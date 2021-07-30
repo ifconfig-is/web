@@ -18,15 +18,20 @@ export class DataService {
 
   nextQuery(query: string) {
     this.query.next(query);
-    this.doQuery();
+    this.doQuery(query);
   }
 
   nextIPData(ipData: any) {
     this.ipData.next(ipData);
   }
 
-  doQuery(): Observable<any> {
-    let url = environment.apiUrl;
+  doQuery(query: string): Observable<any> {
+    let url;
+    if (query == '') {
+      url = environment.apiUrl;
+    } else {
+      url = environment.apiUrl + '/' + query;
+    }
     return this.http.get(url, { headers: this.headers }).pipe(
       map((res: Response) => {
         return res;
