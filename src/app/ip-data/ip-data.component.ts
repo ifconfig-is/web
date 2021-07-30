@@ -25,7 +25,6 @@ export class IpDataComponent implements OnInit {
     this.dataService.doQuery().subscribe((data) => {
       this.data = data;
       if (typeof this.data.ip !== 'undefined') {
-        console.log(this.data);
         this.isLoading = false;
       }
     });

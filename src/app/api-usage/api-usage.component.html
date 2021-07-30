@@ -1,5 +1,5 @@
 <div class="context">
-  <div class="subtitle">Simple API</div>
+  <div class="subtitle">API Usage</div>
   <div *ngIf="isShow">
     <div *ngIf="!hasError">
       <p>
@@ -7,9 +7,7 @@
         <br />
         {{ data.IP.Address }}
       </p>
-      <div>
-        &#36; curl ifconfig.is/json
-      </div>
+      <div>&#36; curl ifconfig.is/json</div>
       <pre>{{ jsonStr }}</pre>
     </div>
     <div *ngIf="hasError">
