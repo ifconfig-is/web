@@ -8,9 +8,6 @@ import { environment } from '../environments/environment';
   providedIn: 'root',
 })
 export class DataService {
-  //headers = new HttpHeaders({ withCredentials: 'true' });
-  headers = new HttpHeaders();
-
   query = new BehaviorSubject('');
   sharedQuery = this.query.asObservable();
   ipData = new BehaviorSubject({});
@@ -25,19 +22,16 @@ export class DataService {
     this.ipData.next(ipData);
   }
 
-  doQuery(query: string): Observable<any> {
+  doQuery(query: string) {
     let url;
     if (query == '') {
       url = environment.apiUrl;
     } else {
       url = environment.apiUrl + '/' + query;
     }
-    return this.http.get(url, { headers: this.headers }).pipe(
-      map((res: Response) => {
-        return res;
-      }),
-      catchError((err) => of(err.error))
-    );
+    this.http.get(url).subscribe((res) => {
+      this.nextIPData(res);
+    });
   }
 
   constructor(private http: HttpClient) {}
