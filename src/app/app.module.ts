@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { MatIconRegistry, MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { ClipboardModule } from '@angular/cdk/clipboard';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -41,6 +42,7 @@ import { GithubIconComponent } from './header/github-icon/github-icon.component'
     MatIconModule,
     MatFormFieldModule,
     MatInputModule,
+    ClipboardModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

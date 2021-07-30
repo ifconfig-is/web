@@ -1,20 +1,18 @@
 <div class="context">
-  <div class="subtitle">API Usage</div>
-  <div *ngIf="isShow">
-    <div *ngIf="!hasError">
-      <p>
-        &#36; curl ifconfig.is
-        <br />
-        {{ data.IP.Address }}
-      </p>
-      <div>&#36; curl ifconfig.is/json</div>
-      <pre>{{ jsonStr }}</pre>
+  <div *ngIf="!isLoading">
+    <p>
+      &#36; curl ifconfig.is
+      <button [cdkCopyToClipboard]="'curl ifconfig.is'">Copy</button>
+      <br />
+      {{ data.ip }}
+    </p>
+    <div>
+      &#36; curl ifconfig.is/json
+      <button [cdkCopyToClipboard]="'curl ifconfig.is/json'">Copy</button>
     </div>
-    <div *ngIf="hasError">
-      <p>Error</p>
-    </div>
+    <pre>{{ jsonStr }}</pre>
   </div>
-  <div *ngIf="!isShow">
+  <div *ngIf="isLoading">
     <p>Loading...</p>
   </div>
 </div>

@@ -14,7 +14,7 @@ export class IpDataComponent implements OnInit {
     continent: 'Loading...',
     latitude: 'Loading...',
     longitude: 'Loading...',
-    org: 'Loading...',
+    organization: 'Loading...',
     asn: 'Loading...',
   };
   isLoading: boolean = true;

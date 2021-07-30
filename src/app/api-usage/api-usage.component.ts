@@ -7,8 +7,7 @@ import { DataService } from '../data.service';
   styleUrls: ['./api-usage.component.css'],
 })
 export class ApiUsageComponent implements OnInit {
-  isShow: boolean;
-  hasError: boolean;
+  isLoading: boolean = true;
   data: any;
   json: any;
   jsonStr: any;
@@ -24,34 +23,23 @@ export class ApiUsageComponent implements OnInit {
   constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
-    /*
-    this.dataService.doQuery();
-    this.dataService.sharedIPData.subscribe(data => {
+    this.dataService.doQuery('');
+    this.dataService.sharedIPData.subscribe((data) => {
       this.data = data;
-      if (typeof this.data.IP !== 'undefined') {
-        this.isShow = true;
-        if (this.data.IP == null) {
-          this.hasError = true;
-        } else {
-          this.hasError = false;
-          this.json = {
-            Continent: this.data.GeoIP2City.Continent.Names.en,
-            Country: this.data.GeoIP2City.Country.Names.en,
-            City: this.data.GeoIP2City.City.Names.en,
-            Latitude: this.data.GeoIP2City.Location.Latitude,
-            Longitude: this.data.GeoIP2City.Location.Longitude,
-            TimeZone: this.data.GeoIP2City.Location.TimeZone,
-            IsEU: this.data.GeoIP2City.Country.IsInEuropeanUnion,
-            ASN: this.data.GeoIP2ASN.AutonomousSystemNumber,
-            ORG: this.data.GeoIP2ASN.AutonomousSystemOrganization
-          };
-          this.cleanNull(this.json);
-          this.jsonStr = JSON.stringify(this.json, null, 2);
-        }
-      } else {
-        this.isShow = false;
+      if (typeof this.data.ip !== 'undefined') {
+        this.isLoading = false;
+        this.json = {
+          city: this.data.city,
+          country: this.data.country,
+          continent: this.data.continent,
+          latitude: this.data.latitude,
+          longitude: this.data.longitude,
+          organization: this.data.org,
+          asn: this.data.asn,
+        };
+        this.cleanNull(this.json);
+        this.jsonStr = JSON.stringify(this.json, null, 2);
       }
     });
-		*/
   }
 }
