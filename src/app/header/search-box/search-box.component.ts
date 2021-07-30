@@ -4,7 +4,7 @@ import { DataService } from '../../data.service';
 @Component({
   selector: 'app-search-box',
   templateUrl: './search-box.component.html',
-  styleUrls: ['./search-box.component.css']
+  styleUrls: ['./search-box.component.css'],
 })
 export class SearchBoxComponent implements OnInit {
   isMobile: boolean = window.innerWidth < 768;
@@ -14,7 +14,7 @@ export class SearchBoxComponent implements OnInit {
     if (event.keyCode == 13) {
       let ip = this.filter(this.query);
       this.query = ip;
-      this.dataService.nextQuery(this.query);
+      //this.dataService.nextQuery(this.query);
     }
   }
 

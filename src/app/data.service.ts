@@ -1,10 +1,16 @@
 import { Injectable } from '@angular/core';
-import { Observable, BehaviorSubject } from 'rxjs';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Subscription, BehaviorSubject, Observable, of, pipe } from 'rxjs';
+import { map, catchError } from 'rxjs/operators';
+import { environment } from '../environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class DataService {
+  //headers = new HttpHeaders({ withCredentials: 'true' });
+  headers = new HttpHeaders();
+
   query = new BehaviorSubject('');
   sharedQuery = this.query.asObservable();
   ipData = new BehaviorSubject({});
@@ -19,7 +25,15 @@ export class DataService {
     this.ipData.next(ipData);
   }
 
-  doQuery() {}
+  doQuery(): Observable<any> {
+    let url = environment.apiUrl;
+    return this.http.get(url, { headers: this.headers }).pipe(
+      map((res: Response) => {
+        return res;
+      }),
+      catchError((err) => of(err.error))
+    );
+  }
 
-  constructor() {}
+  constructor(private http: HttpClient) {}
 }

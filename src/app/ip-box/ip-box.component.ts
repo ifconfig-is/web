@@ -4,7 +4,7 @@ import { DataService } from '../data.service';
 @Component({
   selector: 'app-ip-box',
   templateUrl: './ip-box.component.html',
-  styleUrls: ['./ip-box.component.css']
+  styleUrls: ['./ip-box.component.css'],
 })
 export class IpBoxComponent implements OnInit {
   isMobile: boolean = window.innerWidth < 768;
@@ -15,6 +15,7 @@ export class IpBoxComponent implements OnInit {
   constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
+    /*
     this.dataService.doQuery();
     this.dataService.sharedIPData.subscribe(data => {
       this.data = data;
@@ -29,5 +30,6 @@ export class IpBoxComponent implements OnInit {
         this.isShow = false;
       }
     });
+		*/
   }
 }

@@ -4,7 +4,7 @@ import { DataService } from '../data.service';
 @Component({
   selector: 'app-simple-api',
   templateUrl: './simple-api.component.html',
-  styleUrls: ['./simple-api.component.css']
+  styleUrls: ['./simple-api.component.css'],
 })
 export class SimpleApiComponent implements OnInit {
   isShow: boolean;
@@ -24,6 +24,7 @@ export class SimpleApiComponent implements OnInit {
   constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
+    /*
     this.dataService.doQuery();
     this.dataService.sharedIPData.subscribe(data => {
       this.data = data;
@@ -51,5 +52,6 @@ export class SimpleApiComponent implements OnInit {
         this.isShow = false;
       }
     });
+		*/
   }
 }
